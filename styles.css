@@ -87,6 +87,9 @@ body {
     gap: 20px;
 }
 
+a {
+    text-decoration: none;
+}
 
 
 /* Adjust layout for mobile view */
@@ -95,14 +98,15 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 .movie-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    text-align: center;
+    position: relative;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .movie-card:hover {
@@ -111,21 +115,24 @@ body {
 
 .movie-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
     border-radius: 10px 10px 0 0;
+    object-fit: fill;
 }
 
-.movie-card h3 {
-    font-size: 18px;
-    margin: 10px;
-    color: #333;
+.movie-card .movie-details {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
 }
-
 .footer {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 20px;
 }
+
 
 /* Add more styles as needed */
